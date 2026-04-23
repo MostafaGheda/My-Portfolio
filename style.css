@@ -8,7 +8,7 @@
   --card: #1E3A5F;
   --card-hover: #243F6A;
   --white: #E6F1FF;
-  --font-head: 'DM Sans', sans-serif;
+  --font-head: 'Syne', sans-serif;
   --font-body: 'DM Sans', sans-serif;
 }
 
@@ -186,19 +186,19 @@ section {
 }
 
 .hero-name {
-  font-family: var(--font-head);
+  font-family: var(--font-body);
   font-size: clamp(2.2rem, 5vw, 3.8rem);
-  font-weight: 800;
+  font-weight: 700;
   color: var(--white);
-  line-height: 1.1;
+  line-height: 1.15;
   margin-bottom: 0.5rem;
   animation: fadeUp 0.6s ease 0.1s both;
 }
 
 .hero-title {
-  font-family: var(--font-head);
-  font-size: clamp(1rem, 2vw, 1.4rem);
-  font-weight: 600;
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 500;
   color: var(--text-dim);
   margin-bottom: 1.5rem;
   animation: fadeUp 0.6s ease 0.2s both;
@@ -365,7 +365,8 @@ section {
 .powerbi-images {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
+  gap: 1rem;
+  padding: 1.25rem;
 }
 
 .powerbi-img-wrap {
@@ -373,6 +374,9 @@ section {
   overflow: hidden;
   cursor: pointer;
   aspect-ratio: 16/10;
+  border-radius: 10px;
+  border: 1px solid rgba(100,255,218,0.18);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.35);
 }
 
 .powerbi-img-wrap img {
@@ -381,6 +385,7 @@ section {
   object-fit: cover;
   transition: transform 0.4s ease;
   display: block;
+  border-radius: 10px;
 }
 
 .powerbi-img-wrap::after {
@@ -394,10 +399,12 @@ section {
   font-size: 1.5rem;
   opacity: 0;
   transition: opacity 0.3s;
+  border-radius: 10px;
 }
 
 .powerbi-img-wrap:hover img { transform: scale(1.05); }
 .powerbi-img-wrap:hover::after { opacity: 1; }
+.powerbi-img-wrap:hover { border-color: rgba(100,255,218,0.45); box-shadow: 0 6px 28px rgba(100,255,218,0.12); }
 
 .powerbi-info {
   padding: 2rem 2.5rem;
@@ -811,7 +818,7 @@ footer span { color: var(--accent); }
 
   .about-grid { grid-template-columns: 1fr; gap: 2rem; }
 
-  .powerbi-images { grid-template-columns: 1fr 1fr; }
+  .powerbi-images { grid-template-columns: 1fr 1fr; gap: 0.75rem; padding: 0.75rem; }
   .powerbi-info { grid-template-columns: 1fr; }
   .powerbi-metrics { flex-direction: row; flex-wrap: wrap; }
 
@@ -833,6 +840,6 @@ footer span { color: var(--accent); }
 }
 
 @media (max-width: 560px) {
-  .powerbi-images { grid-template-columns: 1fr; }
+  .powerbi-images { grid-template-columns: 1fr; gap: 0.75rem; padding: 0.75rem; }
   .projects-grid { grid-template-columns: 1fr; }
 }

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mostafa Mahmoud Gheda — BI Developer & Data Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">MG.</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#powerbi">Power BI</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-image">
+    <img src="profile.jpg" alt="Mostafa Mahmoud Gheda"
+         onerror="this.style.background='linear-gradient(135deg,#1E3A5F,#112240)';this.style.width='230px';this.style.height='300px';this.removeAttribute('src')">
+  </div>
+  <div class="hero-text">
+    <p class="hero-greeting">Hello, I'm</p>
+    <h1 class="hero-name">Mostafa<br>Mahmoud Gheda</h1>
+    <p class="hero-title">Business Intelligence Developer | Data Analyst</p>
+    <p class="hero-bio">Detail-oriented BI developer with 1+ year of experience in data analysis, Power BI, SQL, and ETL pipelines — turning raw data into actionable insight.</p>
+    <div class="hero-btns">
+      <a href="#powerbi" class="btn btn-primary">View Work</a>
+      <a href="#contact" class="btn btn-outline">Contact Me</a>
+      <a href="https://www.linkedin.com/in/mostafa-mahmoud-7176bb226/" target="_blank" class="btn btn-outline">LinkedIn ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <p class="section-label">About Me</p>
+  <h2 class="section-title">Who I Am</h2>
+  <div class="about-grid fade-in">
+    <div class="about-text">
+      <p>I'm a Computer Science graduate from <strong style="color:var(--white)">Mansoura University</strong> and an <strong style="color:var(--white)">ITI scholarship graduate</strong>, specializing in Business Intelligence and data analysis solutions.</p>
+      <p>My work spans designing enterprise data warehouses, building interactive Power BI dashboards, and crafting ETL pipelines that handle millions of records. I thrive at the intersection of data engineering and business strategy — making numbers tell meaningful stories.</p>
+      <p>When I'm not querying databases or modeling data, I'm exploring new analytical techniques and pushing the boundaries of what's possible with modern BI tooling.</p>
+    </div>
+    <div class="about-details">
+      <div class="detail-item">
+        <div class="detail-icon">🎓</div>
+        <div>
+          <div class="detail-label">Education</div>
+          <div class="detail-value">Computer Science — Mansoura University</div>
+        </div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-icon">🏛️</div>
+        <div>
+          <div class="detail-label">Training</div>
+          <div class="detail-value">ITI Scholarship Graduate</div>
+        </div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-icon">📍</div>
+        <div>
+          <div class="detail-label">Location</div>
+          <div class="detail-value">Cairo, Egypt</div>
+        </div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-icon">🪖</div>
+        <div>
+          <div class="detail-label">Military Status</div>
+          <div class="detail-value">Exempted</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <p class="section-label">Technical Skills</p>
+  <h2 class="section-title">Core Competencies</h2>
+  <div class="skills-grid fade-in">
+    <span class="skill-chip">SQL</span>
+    <span class="skill-chip">Power BI</span>
+    <span class="skill-chip">Python</span>
+    <span class="skill-chip">SSIS</span>
+    <span class="skill-chip">ETL</span>
+    <span class="skill-chip">Data Modeling</span>
+    <span class="skill-chip">Data Warehousing</span>
+    <span class="skill-chip">Excel</span>
+    <span class="skill-chip">Data Cleaning</span>
+    <span class="skill-chip">Statistical Analysis</span>
+    <span class="skill-chip">DAX</span>
+    <span class="skill-chip">Star Schema</span>
+    <span class="skill-chip">SCD Type 1 &amp; 2</span>
+  </div>
+</section>
+
+<!-- POWER BI PROJECTS -->
+<section id="powerbi">
+  <p class="section-label">Featured Project</p>
+  <h2 class="section-title">Power BI Dashboard</h2>
+  <div class="powerbi-card fade-in">
+    <div class="powerbi-images">
+      <div class="powerbi-img-wrap" onclick="openLightbox('Capture 4.PNG')">
+        <img src="Capture 4.PNG" alt="CRM Dashboard Overview"
+             onerror="this.parentNode.style.background='#112240';this.style.display='none'">
+      </div>
+      <div class="powerbi-img-wrap" onclick="openLightbox('Capture 5.PNG')">
+        <img src="Capture 5.PNG" alt="CRM Dashboard Sales Analysis"
+             onerror="this.parentNode.style.background='#0f1e35';this.style.display='none'">
+      </div>
+      <div class="powerbi-img-wrap" onclick="openLightbox('Capture 6.PNG')">
+        <img src="Capture 6.PNG" alt="CRM Dashboard Regional Performance"
+             onerror="this.parentNode.style.background='#112240';this.style.display='none'">
+      </div>
+    </div>
+    <div class="powerbi-info">
+      <div>
+        <h3 class="powerbi-title">CRM Sales Opportunities Dashboard</h3>
+        <p class="powerbi-desc">A comprehensive CRM sales dashboard tracking $10.01M total sales across 8,300 opportunities. Features win/loss rate analysis by region and product category, team performance breakdowns, and quarterly goal tracking. Enables sales leadership to identify top performers and pipeline bottlenecks at a glance.</p>
+        <div class="tech-badges">
+          <span class="tech-badge">Power BI</span>
+          <span class="tech-badge">Star Schema</span>
+          <span class="tech-badge">DAX</span>
+          <span class="tech-badge">Data Modeling</span>
+        </div>
+      </div>
+      <div class="powerbi-metrics">
+        <div class="metric-item">
+          <span class="metric-value">$10.01M</span>
+          <span class="metric-label">Total Sales</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-value">8,300</span>
+          <span class="metric-label">Opportunities</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-value">Multi-region</span>
+          <span class="metric-label">Coverage</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OTHER PROJECTS -->
+<section id="projects">
+  <p class="section-label">Other Work</p>
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-grid fade-in">
+
+    <div class="project-card">
+      <div class="project-icon">🏪</div>
+      <h3 class="project-name">Grocery Sales DWH</h3>
+      <p class="project-desc">End-to-end ETL pipeline with star schema design, SCD Type 1 &amp; 2 handling, and incremental loading strategy processing 7 million records with high performance and reliability.</p>
+      <div class="tech-badges" style="margin-bottom:1.25rem">
+        <span class="tech-badge">SSIS</span>
+        <span class="tech-badge">SQL</span>
+        <span class="tech-badge">SCD</span>
+        <span class="tech-badge">Star Schema</span>
+      </div>
+      <a href="https://github.com/MostafaGheda/Grocery-Sales-Pipeline" target="_blank" class="project-link">View on GitHub →</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">🚗</div>
+      <h3 class="project-name">Uber Rides Analytics</h3>
+      <p class="project-desc">Python-powered analysis of 150K bookings generating $52M revenue. Deep-dive into cancellation patterns, peak demand windows, driver performance, and revenue optimization strategies.</p>
+      <div class="tech-badges" style="margin-bottom:1.25rem">
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">Pandas</span>
+        <span class="tech-badge">Matplotlib</span>
+        <span class="tech-badge">Statistical Analysis</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">📊</div>
+      <h3 class="project-name">Clients &amp; Products Sales</h3>
+      <p class="project-desc">Customer segmentation analysis with interactive dashboard covering product performance KPIs, cohort analysis, and revenue attribution across client tiers and product lines.</p>
+      <div class="tech-badges" style="margin-bottom:1.25rem">
+        <span class="tech-badge">Power BI</span>
+        <span class="tech-badge">DAX</span>
+        <span class="tech-badge">Segmentation</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <p class="section-label">Work History</p>
+  <h2 class="section-title">Experience</h2>
+  <div class="exp-card fade-in">
+    <div class="exp-header">
+      <div>
+        <div class="exp-role">Data Analyst</div>
+        <div class="exp-company">Shawahid Industrial Roads</div>
+      </div>
+      <div class="exp-period">May 2024 – Dec 2025</div>
+    </div>
+    <ul class="exp-tasks">
+      <li>Developed and optimized data models in Power BI to support business decision-making and reporting workflows</li>
+      <li>Designed and maintained interactive dashboards for client and product data, enabling real-time performance tracking</li>
+      <li>Engaged directly with clients to gather analytical requirements and translate business needs into data solutions</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <p class="section-label">Credentials</p>
+  <h2 class="section-title">Certifications</h2>
+  <div class="cert-card fade-in">
+    <div class="cert-icon">🏅</div>
+    <div class="cert-info">
+      <div class="cert-name">Microsoft Certified: Power BI Data Analyst Associate</div>
+      <div class="cert-issuer">Microsoft · Exam PL-300</div>
+      <div class="tech-badges">
+        <span class="tech-badge">Power BI</span>
+        <span class="tech-badge">DAX</span>
+        <span class="tech-badge">Data Visualization</span>
+        <span class="tech-badge">Microsoft</span>
+      </div>
+    </div>
+    <a href="https://learn.microsoft.com/en-us/users/mostafagheda-4404/credentials/8790074995eaa2e9"
+       target="_blank" class="btn btn-outline">View Credential ↗</a>
+  </div>
+</section>
+
+<!-- CV DOWNLOAD -->
+<section style="padding-top:0; text-align:center">
+  <a href="MostafaMahmoud_BI_Developer_CV.pdf" download
+     class="btn btn-primary"
+     style="font-size:1rem; padding:1rem 2.5rem; display:inline-flex; gap:0.6rem; align-items:center">
+    ⬇ Download CV (PDF)
+  </a>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <p class="section-label">Get In Touch</p>
+  <h2 class="section-title" style="text-align:center; margin-left:auto; margin-right:auto">Let's Work Together</h2>
+  <p class="contact-subtitle">Open to new opportunities, freelance projects, or just a great data conversation.</p>
+  <div class="contact-grid fade-in">
+    <a href="mailto:mgheda50@gmail.com" class="contact-item">
+      <span class="contact-item-icon">✉️</span>
+      <span>mgheda50@gmail.com</span>
+    </a>
+    <a href="tel:+201551714019" class="contact-item">
+      <span class="contact-item-icon">📞</span>
+      <span>+20 155 171 4019</span>
+    </a>
+    <a href="https://www.linkedin.com/in/mostafa-mahmoud-7176bb226/" target="_blank" class="contact-item">
+      <span class="contact-item-icon">💼</span>
+      <span>LinkedIn Profile</span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 <span>Mostafa Mahmoud Gheda</span>. Built with passion for data.</p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightboxBtn()">✕</button>
+  <img id="lightboxImg" src="" alt="Dashboard preview">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

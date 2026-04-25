@@ -34,9 +34,9 @@
   </div>
   <div class="hero-text">
     <p class="hero-greeting">Hello, I'm</p>
-    <h1 class="hero-name">Mostafa<br>Mahmoud Gheda</h1>
+    <h1 class="hero-name">Mostafa Mahmoud</h1>
     <p class="hero-title">Business Intelligence Developer | Data Analyst</p>
-    <p class="hero-bio">Detail-oriented BI developer with 1+ year of experience in business intelligence and data analysis using Power BI, SQL, Python, and many other tools — turning raw data into actionable insight.</p>
+    <p class="hero-bio">Detail-oriented BI developer with 1+ year of experience in business intelligence and data analysis using Power BI, SQL, Python and many other tools — turning raw data into actionable insight.</p>
     <div class="hero-btns">
       <a href="#projects" class="btn btn-primary">View Work</a>
       <a href="#contact" class="btn btn-outline">Contact Me</a>
@@ -96,6 +96,7 @@
     <span class="skill-chip">SQL</span>
     <span class="skill-chip">Power BI</span>
     <span class="skill-chip">Python</span>
+    <span class="skill-chip">SSIS</span>
     <span class="skill-chip">ETL</span>
     <span class="skill-chip">Data Modeling</span>
     <span class="skill-chip">Data Warehousing</span>
@@ -114,7 +115,7 @@
     <!-- CRM Sales — with swappable images -->
     <div class="project-card project-card--wide">
       <div class="project-img-slider" data-images='["Capture 4.PNG","Capture 5.PNG","Capture 6.PNG"]'>
-        <div class="slider-track">
+        <div class="slider-track" onclick="openLightboxFromSlider(this)">
           <img class="slider-img active" src="Capture 4.PNG" alt="CRM Overview"
                onerror="this.closest('.project-img-slider').style.display='none'">
           <img class="slider-img" src="Capture 5.PNG" alt="CRM Store Analysis">
@@ -127,7 +128,6 @@
           <span class="dot" onclick="goToSlide(this,1)"></span>
           <span class="dot" onclick="goToSlide(this,2)"></span>
         </div>
-        <button class="slider-expand" onclick="openLightboxFromSlider(this)" aria-label="Expand">⤢</button>
       </div>
       <div class="project-body">
         <div class="project-icon">📈</div>
@@ -142,14 +142,15 @@
         <div class="project-metrics">
           <div class="pm-item"><span class="pm-val">$10.01M</span><span class="pm-lbl">Total Sales</span></div>
           <div class="pm-item"><span class="pm-val">8,300</span><span class="pm-lbl">Opportunities</span></div>
+          <div class="pm-item"><span class="pm-val">Multi-region</span><span class="pm-lbl">Coverage</span></div>
         </div>
       </div>
     </div>
 
     <!-- Coffee Shop Sales — with swappable images -->
     <div class="project-card project-card--wide">
-      <div class="project-img-slider" data-images='["Coffee sales 1.jpg","Coffee sales 2.jpg","Coffee sales 3.jpg"]'>
-        <div class="slider-track">
+      <div class="project-img-slider" data-images='["Coffee sales 1.jpg","Coffee sales2.jpg","Coffee sales 3.jpg"]'>
+        <div class="slider-track" onclick="openLightboxFromSlider(this)">
           <img class="slider-img active" src="Coffee sales 1.jpg" alt="Coffee Shop Overview"
                onerror="this.closest('.project-img-slider').style.display='none'">
           <img class="slider-img" src="Coffee sales 2.jpg" alt="Coffee Shop Store View">
@@ -162,7 +163,6 @@
           <span class="dot" onclick="goToSlide(this,1)"></span>
           <span class="dot" onclick="goToSlide(this,2)"></span>
         </div>
-        <button class="slider-expand" onclick="openLightboxFromSlider(this)" aria-label="Expand">⤢</button>
       </div>
       <div class="project-body">
         <div class="project-icon">☕</div>
@@ -208,7 +208,7 @@
         <span class="tech-badge">Statistical Analysis</span>
       </div>
     </div>
-    
+
   </div>
 </section>
 
@@ -225,9 +225,12 @@
       <div class="exp-period">May 2024 – Dec 2025</div>
     </div>
     <ul class="exp-tasks">
-      <li>Developed and optimized data models in Power BI to support business decision-making and reporting workflows</li>
-      <li>Designed and maintained interactive dashboards for client and product data, enabling real-time performance tracking</li>
-      <li>Engaged directly with clients to gather analytical requirements and translate business needs into data solutions</li>
+      <li>Developed and optimized data models to support efficient analysis and reporting using Power BI</li>
+      <li>Designed and delivered comprehensive reports and dashboards for client and product data, enabling data-driven decision-making</li>
+      <li>Enhanced existing reports to improve accuracy, performance, and visual presentation</li>
+      <li>Automated and delivered ad-hoc reports to meet specific and evolving business requirements</li>
+      <li>Engaged directly with clients to gather requirements and deliver tailored pricing solutions aligned with business needs</li>
+      <li>Collaborated with cross-functional teams to drive improvements in sales performance and enhance overall client satisfaction</li>
     </ul>
   </div>
 </section>
@@ -290,8 +293,13 @@
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-  <button class="lightbox-close" onclick="closeLightboxBtn()">✕</button>
-  <img id="lightboxImg" src="" alt="Dashboard preview">
+  <button class="lightbox-close" onclick="closeLightboxBtn()" aria-label="Close">✕</button>
+  <button class="lightbox-nav lightbox-nav--prev" onclick="lightboxNav(-1)" aria-label="Previous">&#8249;</button>
+  <div class="lightbox-inner">
+    <img id="lightboxImg" src="" alt="Dashboard preview">
+    <div class="lightbox-dots" id="lightboxDots"></div>
+  </div>
+  <button class="lightbox-nav lightbox-nav--next" onclick="lightboxNav(1)" aria-label="Next">&#8250;</button>
 </div>
 
 <script src="script.js"></script>

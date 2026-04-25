@@ -147,9 +147,16 @@ section {
   align-items: center;
   justify-content: center;
   padding: 4rem 8%;
-  gap: 5rem;
   position: relative;
   overflow: hidden;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  max-width: 900px;
+  width: 100%;
 }
 
 #hero::before {
@@ -190,7 +197,7 @@ section {
 
 .hero-image:hover img { filter: grayscale(0%) contrast(1.1); }
 
-.hero-text { flex: 1; }
+.hero-text { flex: 0 1 auto; }
 
 .hero-greeting {
   font-size: 0.9rem;
@@ -913,11 +920,12 @@ footer span { color: var(--accent); }
 @media (max-width: 900px) {
   section { padding: 3.5rem 6%; }
 
-  #hero {
+  #hero { padding: 3rem 6%; }
+
+  .hero-inner {
     flex-direction: column-reverse;
     text-align: center;
     gap: 2.5rem;
-    padding: 3rem 6%;
   }
 
   .hero-btns { justify-content: center; }

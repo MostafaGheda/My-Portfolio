@@ -145,6 +145,7 @@ section {
   min-height: calc(100vh - 64px);
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 4rem 8%;
   gap: 5rem;
   position: relative;

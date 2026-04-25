@@ -492,6 +492,13 @@ section {
 .slider-btn--prev { left: 0.6rem; }
 .slider-btn--next { right: 0.6rem; }
 
+.slider-track {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: zoom-in;
+}
+
 .slider-dots {
   position: absolute;
   bottom: 0.6rem;
@@ -515,27 +522,72 @@ section {
   transform: scale(1.25);
 }
 
-.slider-expand {
-  position: absolute;
-  top: 0.6rem;
-  right: 0.6rem;
-  background: rgba(10,25,47,0.75);
-  border: 1px solid rgba(100,255,218,0.25);
+/* ─── LIGHTBOX NAV ───────────────────────────────────── */
+.lightbox-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 90vw;
+}
+
+.lightbox-inner img {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 80px rgba(0,0,0,0.5);
+  object-fit: contain;
+  display: block;
+}
+
+.lightbox-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.lightbox-dots .dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  border: none;
+}
+
+.lightbox-dots .dot.active {
+  background: var(--accent);
+  transform: scale(1.3);
+}
+
+.lightbox-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(10,25,47,0.8);
+  border: 1px solid rgba(100,255,218,0.3);
   color: var(--accent);
-  font-size: 1rem;
-  width: 30px; height: 30px;
-  border-radius: 6px;
+  font-size: 2.5rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
+  z-index: 1010;
   transition: all 0.2s;
+  line-height: 1;
 }
-.slider-expand:hover {
+
+.lightbox-nav:hover {
   background: rgba(100,255,218,0.15);
   border-color: var(--accent);
 }
+
+.lightbox-nav--prev { left: 1.5rem; }
+.lightbox-nav--next { right: 1.5rem; }
 
 /* wide card body */
 .project-body {
@@ -792,15 +844,7 @@ section {
   backdrop-filter: blur(10px);
 }
 
-.lightbox.open { display: flex; }
-
-.lightbox img {
-  max-width: 90vw;
-  max-height: 85vh;
-  border-radius: 10px;
-  box-shadow: 0 0 80px rgba(0,0,0,0.5);
-  object-fit: contain;
-}
+.lightbox.open { display: flex; align-items: center; justify-content: center; gap: 1rem; }
 
 .lightbox-close {
   position: absolute;
